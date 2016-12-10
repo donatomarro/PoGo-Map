@@ -43,8 +43,8 @@ import time
 import random
 import requests
 import sys
-from copy import deepcopy
 import traceback
+from copy import deepcopy
 from collections import Counter
 from queue import Empty
 from operator import itemgetter
