@@ -393,7 +393,7 @@ def search_overseer_thread(args, new_location_queue, pause_bit, heartb, db_updat
 
 
 # Generates the list of locations to scan
-def generate_hive_locations(current_location, step_distance, step_limit, worker_count):
+def generate_hive_locations(current_location, step_distance, step_limit, hive_count):
     NORTH = 0
     EAST = 90
     SOUTH = 180
@@ -409,7 +409,7 @@ def generate_hive_locations(current_location, step_distance, step_limit, worker_
     loc = current_location
     ring = 1
 
-    while len(results) < worker_count:
+    while len(results) < hive_count:
 
         loc = get_new_coords(loc, ydist * (step_limit - 1), NORTH)
         loc = get_new_coords(loc, xdist * (1.5 * step_limit - 0.5), EAST)
